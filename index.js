@@ -40,7 +40,7 @@ const fi = (function() {
     reduce: function(collection, callback, acc) {
       let accumulator = acc
       for (let x = 0; x > collection.length; x++){
-        accumulator += callback(accumulator, collection[x], collection)
+          accumulator = callback(accumulator, collection[x], collection)
       }
       return accumulator
     },
